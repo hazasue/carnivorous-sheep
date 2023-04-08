@@ -6,26 +6,39 @@ public class Player : MonoBehaviour
 {
 	private static float MOVE_POWER;
 	private static float ROTATE_POWER;
+	private static float JUMP_POWER;
 
 
 	// attributes
 	private float movePower;
 	private float rotPower;
+	private float jumpPower;
+	private int jumpCount;
 
-    // Start is called before the first frame update
-    void Start()
+	private bool gameOver;
+
+	// Start is called before the first frame update
+	void Start()
     {
 		MOVE_POWER		= 5f;
 		ROTATE_POWER	= 10f;
+		JUMP_POWER		= 7f;
 
-		movePower	 = MOVE_POWER;
+		movePower	= MOVE_POWER;
 		rotPower	= ROTATE_POWER;
+		jumpPower	= JUMP_POWER;
+
+		gameOver = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-		Move();
+		if (gameOver == false)
+		{
+			Move();
+			Jump();
+		}
     }
 
     private void Move()
@@ -79,5 +92,26 @@ public class Player : MonoBehaviour
 		movePos.y = 0f;
 		movePos = movePos.normalized;
 		this.transform.position += movePos * movePower * Time.deltaTime;
+	}
+
+	private void Jump()
+	{
+		if(this.GetComponent<Rigidbody>().velocity == new Vector3(0f, 0f, 0f)) { jumpCount = 1; }
+		if (jumpCount <= 0) return;
+		if (Input.GetButtonDown("Jump"))
+		{
+			this.GetComponent<Rigidbody>().velocity = new Vector3(0, jumpPower, 0);
+			jumpCount -= 1;
+		}
+	}
+
+	public void SetGameOver(bool _bool)
+	{
+		gameOver = _bool;
+	}
+
+	public void OnTriggerEnter(Collider obj)
+	{
+		
 	}
 }
