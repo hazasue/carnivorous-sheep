@@ -64,3 +64,9 @@ UserSettings/
 ProjectSettings/
 
 .vsconfig
+*.log
+*.outputdata
+*.dag
+*.outputdata
+*.dag_derived
+*.dag_fsmtime
