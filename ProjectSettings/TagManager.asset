@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ingredient
   - Goal
+  - Leap
   layers:
   - Default
   - TransparentFX
