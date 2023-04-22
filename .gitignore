@@ -62,6 +62,8 @@ crashlytics-build.properties
 
 UserSettings/
 ProjectSettings/
+Logs/
+Library/
 
 .vsconfig
 *.log
