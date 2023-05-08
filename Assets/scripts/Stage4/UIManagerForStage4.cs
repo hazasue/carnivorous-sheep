@@ -7,11 +7,11 @@ using TMPro;
 
 public class UIManagerForStage4 : MonoBehaviour
 {
-    public GameObject restartButton;
+    public GameObject failedScreen;
 	public TMP_Text timer;
-
-
+    
 	private GameObject player;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +22,10 @@ public class UIManagerForStage4 : MonoBehaviour
     void Update()
     {
         if(player.GetComponent<PlayerInStage4>().GetTimer() >= 20f
-            && restartButton.activeSelf == false)
+            && failedScreen.activeSelf == false)
         {
             player.GetComponent<Player>().SetGameOver(true);
-            restartButton.SetActive(true);
+            failedScreen.SetActive(true);
         }
         if (player.GetComponent<PlayerInStage4>().GetTimer() >= 20f) { timer.text = "0.00"; }
         else { timer.text = string.Format("{0:f2}", 20f - player.GetComponent<PlayerInStage4>().GetTimer()); }
@@ -33,6 +33,6 @@ public class UIManagerForStage4 : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("Stage4");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
