@@ -8,21 +8,25 @@ public class PlayerInStage4 : MonoBehaviour
     private int ingrCount;
     private float timer;
 
+    private bool collectAllIngr;
+
     // Start is called before the first frame update
     void Awake()
     {
         ingrCount = 0;
         timer = 0f;
+        collectAllIngr = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-		if (ingrCount >= 4)
-		{
-			SceneManager.LoadScene("Stage Entrance");
-		}
-        timer += Time.deltaTime;
+		if (ingrCount >= 4 && collectAllIngr == false)
+        {
+            collectAllIngr = true;
+        }
+        
+        if (collectAllIngr == false) timer += Time.deltaTime;
 	}
 
     public void AddIngrCount()
@@ -33,5 +37,10 @@ public class PlayerInStage4 : MonoBehaviour
     public float GetTimer()
     {
         return timer;
+    }
+
+    public bool GetCleared()
+    {
+        return collectAllIngr;
     }
 }
