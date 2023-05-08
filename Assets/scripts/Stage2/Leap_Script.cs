@@ -28,7 +28,7 @@ public class Leap_Script : MonoBehaviour
     {
         if (col.tag == "Leap")
         {
-            Debug.Log("¹«¾ßÈ£");
+            Debug.Log("ë¬´ì•¼í˜¸");
             Leap_check = true;
             Leap_Text.SetActive(true);
         }
@@ -51,7 +51,7 @@ public class Leap_Script : MonoBehaviour
     {
         if (col.tag == "Leap")
         {
-            Debug.Log("³ª°¡¹ö·È´Ù");
+            Debug.Log("ë‚˜ê°€ë²„ë ¸ë‹¤");
             Leap_check = false;
             Leap_Text.SetActive(false);
         }
