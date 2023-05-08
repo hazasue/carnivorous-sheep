@@ -21,8 +21,6 @@ public class StarCandy : MonoBehaviour
     {
         if(player.tag == "Player")
         {
-            // TODO: move to main stage scene
-            SceneManager.LoadScene("Stage Entrance");
             Destroy(this.gameObject);
         }
     }
