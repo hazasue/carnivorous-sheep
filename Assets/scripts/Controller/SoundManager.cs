@@ -14,6 +14,7 @@ public class SoundManager : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         this.audioSound = this.gameObject.AddComponent<AudioSource>();
+        this.audioSound.volume = 0.33f;
         this.audioSound.loop = true;
         
         if (bgm == null) return;
