@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 	private int jumpCount;
 
 	private bool gameOver;
+	private bool isWalking;
 
 	// Start is called before the first frame update
 	void Start()
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
 		jumpPower	= JUMP_POWER;
 
 		gameOver = false;
+		isWalking = false;
     }
 
     // Update is called once per frame
@@ -92,7 +94,19 @@ public class Player : MonoBehaviour
 		movePos.y = 0f;
 		movePos = movePos.normalized;
 		this.transform.position += movePos * movePower * Time.deltaTime;
-	}
+
+		if (movePos == Vector3.zero && isWalking == true && this.GetComponent<Rigidbody>().velocity == new Vector3(0f, 0f, 0f))
+		{
+			isWalking = false;
+			SoundManager.GetInstance().StopWalk();
+		}
+		else if (movePos != Vector3.zero && isWalking == false && this.GetComponent<Rigidbody>().velocity == new Vector3(0f, 0f, 0f))
+		{
+			isWalking = true;
+			SoundManager.GetInstance().Walk();
+		}
+
+    }
 
 	private void Jump()
 	{
@@ -102,6 +116,9 @@ public class Player : MonoBehaviour
 		{
 			this.GetComponent<Rigidbody>().velocity = new Vector3(0, jumpPower, 0);
 			jumpCount -= 1;
+			isWalking = false;
+			SoundManager.GetInstance().StopWalk();
+			SoundManager.GetInstance().Jump();
 		}
 	}
 
