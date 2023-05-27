@@ -26,6 +26,7 @@ public class UIManagerForStage4 : MonoBehaviour
         {
             player.GetComponent<Player>().SetGameOver(true);
             failedScreen.SetActive(true);
+            SoundManager.GetInstance().FailStage();
         }
         if (player.GetComponent<PlayerInStage4>().GetTimer() >= 20f) { timer.text = "0.00"; }
         else { timer.text = string.Format("{0:f2}", 20f - player.GetComponent<PlayerInStage4>().GetTimer()); }
