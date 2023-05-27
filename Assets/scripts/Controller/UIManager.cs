@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
         clearScreen.SetActive(true);
     }
 
-    public void UnActiveFailedScreen()
+    public void ActiveFailedScreen()
     {
         if (failedScreen.activeSelf == true) return;
         mGameManager.GetPlayer().GetComponent<Player>().SetGameOver(true);
