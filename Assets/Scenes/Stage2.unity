@@ -461,8 +461,8 @@ MonoBehaviour:
   bgm: {fileID: 8300000, guid: f0a3c3bc8f6de434abda818389fb71c3, type: 3}
   success: {fileID: 8300000, guid: 879d7393774ac594cb68d25584f9ccdd, type: 3}
   fail: {fileID: 8300000, guid: c40c7c7c1badc72419adec5899241d9c, type: 3}
-  walk: {fileID: 8300000, guid: 3db09f82dedaf7c468fd2fd82eb572b0, type: 3}
-  jump: {fileID: 8300000, guid: 69197697678fafc45b7c4c572828ee9f, type: 3}
+  walk: {fileID: 8300000, guid: 69197697678fafc45b7c4c572828ee9f, type: 3}
+  jump: {fileID: 8300000, guid: cd385ae57b2f6fb4c9eed7f1e2bcbb5c, type: 3}
 --- !u!4 &239858777
 Transform:
   m_ObjectHideFlags: 0
