@@ -7,9 +7,23 @@ using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
-    public TMP_Text tDialog;
+    public GameObject gPlayerText;
+    public GameObject gNPCText;
+    public TMP_Text tPlayerDialog;
+    public TMP_Text tNPCDialog;
+    private TMP_Text tDialog;
+    
+    public GameObject player;
+    public GameObject npc;
     public GameObject playerBlind;
     public GameObject npcBlind;
+
+    public Sprite chicken;
+    public Sprite witch;
+    public Sprite cow;
+    public Sprite shrimp;
+    public Sprite olive;
+    
 
     private string[,] dialogDB;
     private int dialogIndex;
@@ -45,6 +59,16 @@ public class DialogManager : MonoBehaviour
         dialogDB[0, 4] = "dialog test 5";
         dialogDB[0, 5] = "dialog test 6";
 
+        tDialog = tPlayerDialog;
+        playerBlind.SetActive(false);
+        npcBlind.SetActive(true);
+        tDialog = tPlayerDialog;
+        gPlayerText.SetActive(true);
+        gNPCText.SetActive(false);
+
+        npc.GetComponent<Image>().sprite = cow;
+        npcBlind.GetComponent<Image>().sprite = cow;
+
         tDialog.text = dialogDB[0, dialogIndex++];
     }
 
@@ -61,11 +85,17 @@ public class DialogManager : MonoBehaviour
         {
             playerBlind.SetActive(true);
             npcBlind.SetActive(false);
+            tDialog = tNPCDialog;
+            gPlayerText.SetActive(false);
+            gNPCText.SetActive(true);
         }
         else
         {
             playerBlind.SetActive(false);
             npcBlind.SetActive(true);
+            tDialog = tPlayerDialog;
+            gPlayerText.SetActive(true);
+            gNPCText.SetActive(false);
         }
     }
 }
