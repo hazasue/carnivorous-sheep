@@ -9,8 +9,12 @@ public class PlayerInStageEntrance : MonoBehaviour
 	{
 		switch (obj.tag)
 		{
+			case "chicken":
+				if (Data.GetInstance().clearStage[0] == false)  DialogManager.GetInstance().SetScreenActive(true, 0);
+				break;
+			
 			case "portal1":
-				if(Data.GetInstance().clearStage[0] == false)	DialogManager.GetInstance().SetScreenActive(true, 0);
+				if (Data.GetInstance().clearStage[0] == false)	DialogManager.GetInstance().SetScreenActive(true, 1);
 				break;
 			case "portal2":
 				if (Data.GetInstance().clearStage[0] == true && Data.GetInstance().clearStage[1] == false)

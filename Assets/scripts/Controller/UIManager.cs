@@ -8,6 +8,9 @@ public class UIManager : MonoBehaviour
 {
     public GameObject clearScreen;
     public GameObject failedScreen;
+
+    public GameObject missionScreen;
+    public GameObject settingScreen;
     
     private GameManager mGameManager;
     
@@ -45,5 +48,25 @@ public class UIManager : MonoBehaviour
     public void MoveToStageEntrance()
     {
         SceneManager.LoadScene("Stage Entrance");
+    }
+
+    public void ActiveSetting()
+    {
+        settingScreen.SetActive(true);
+    }
+    
+    public void restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
+    public void continueGame()
+    {
+        settingScreen.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
