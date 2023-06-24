@@ -40,6 +40,7 @@ public class Sun : MonoBehaviour
             {
                 Leap_Spread.SetActive(false);
                 Clear.SetActive(true);
+                Data.GetInstance().clearStage[2] = true;
                 Leap_Count.SetActive(false);
             }
         }

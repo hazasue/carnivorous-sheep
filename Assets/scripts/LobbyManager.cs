@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LobbyManager : MonoBehaviour
 {
-	public void MoveToStoryRoom()
+	public void MoveToIntro()
 	{
-		SceneManager.LoadScene("Story Room");
+		SceneManager.LoadScene("Intro");
 	}
 
 	public void ExitGame()

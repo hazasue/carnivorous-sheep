@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
                 isCheckedClear = true;
                 mUIManager.ActiveClearScreen();
                 mSoundManager.SuccessStage();
+                Data.GetInstance().clearStage[0] = true;
             }
         } 
         else if (SceneManager.GetActiveScene().name == "Stage4")
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
                 isCheckedClear = true;
                 mUIManager.ActiveClearScreen();
                 mSoundManager.SuccessStage();
+                Data.GetInstance().clearStage[3] = true;
             }
         }
     }
