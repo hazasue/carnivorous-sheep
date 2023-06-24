@@ -7,7 +7,7 @@ public class LobbyManager : MonoBehaviour
 {
 	public void MoveToStoryRoom()
 	{
-		SceneManager.LoadScene("Story Room");
+		SceneManager.LoadScene("Stage Entrance");
 	}
 
 	public void ExitGame()
