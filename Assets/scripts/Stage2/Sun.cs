@@ -8,10 +8,14 @@ public class Sun : MonoBehaviour
     public GameObject Leap_Spread;
     public GameObject Clear;
     public GameObject Leap_Count;
+
+    private SoundManager mSoundManager;
+
     private int leap;
     // Start is called before the first frame update
     void Start()
     {
+        mSoundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         Leap_Spread.SetActive(false);
         Clear.SetActive(false);
         leap = 0;
@@ -40,7 +44,8 @@ public class Sun : MonoBehaviour
             {
                 Leap_Spread.SetActive(false);
                 Clear.SetActive(true);
-                Data.GetInstance().clearStage[2] = true;
+                mSoundManager.SuccessStage();
+                Data.GetInstance().clearStage[1] = true;
                 Leap_Count.SetActive(false);
             }
         }
