@@ -3036,6 +3036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Olive
       objectReference: {fileID: 0}
+    - target: {fileID: 5119420394020055382, guid: 40e1fff6303eabc4dab7304e55e92fbb, type: 3}
+      propertyPath: m_TagString
+      value: portal3
+      objectReference: {fileID: 0}
     - target: {fileID: 5494397136965792748, guid: 40e1fff6303eabc4dab7304e55e92fbb, type: 3}
       propertyPath: m_RootOrder
       value: 3

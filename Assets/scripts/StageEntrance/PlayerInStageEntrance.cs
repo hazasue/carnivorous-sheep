@@ -24,8 +24,8 @@ public class PlayerInStageEntrance : MonoBehaviour
 
 				break;
 			case "portal3":
-				if (Data.GetInstance().clearStage[1] == true && Data.GetInstance().clearStage[2] == false) SceneManager.LoadScene("Stage3");
-				break;
+				if (Data.GetInstance().clearStage[1] == true && Data.GetInstance().clearStage[2] == false) DialogManager.GetInstance().SetScreenActive(true, 3);
+                break;
 			case "portal4":
 				if (Data.GetInstance().clearStage[2] == true && Data.GetInstance().clearStage[3] == false) SceneManager.LoadScene("Stage4");
 				break;

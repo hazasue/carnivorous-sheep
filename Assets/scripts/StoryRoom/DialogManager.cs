@@ -72,6 +72,11 @@ public class DialogManager : MonoBehaviour
         dialogDB[2, 0] = "튀김 가루를 구하러 왔는데 들어가도 괜찮을까요??";
         dialogDB[2, 1] = "원래는 안되지만 이번만 특별히야.";
 
+        dialogDB[3, 0] = "나로 하여금 올리브 나무(올리브가 나는 나무임)가 있는 곳으로 안내(안낸다는 뜻 아님 ㅎ)해줄 수 있겠니?";
+        dialogDB[3, 1] = "좋아요! 그런데 가는 길이 돌로 막혀있어서 길을 다시 찾아야 해요... 대충 방향은 아는데 그걸로 충분할까요?";
+        dialogDB[3, 2] = "그래!";
+
+
 
         tDialog = tPlayerDialog;
         playerBlind.SetActive(false);
