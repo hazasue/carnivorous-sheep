@@ -8,9 +8,7 @@ public class Sun : MonoBehaviour
     public GameObject Leap_Spread;
     public GameObject Clear;
     public GameObject Leap_Count;
-
     private SoundManager mSoundManager;
-
     private int leap;
     // Start is called before the first frame update
     void Start()
