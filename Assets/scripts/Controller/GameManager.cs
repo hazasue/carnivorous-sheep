@@ -55,8 +55,7 @@ public class GameManager : MonoBehaviour
                 mSoundManager.SuccessStage();
                 Data.GetInstance().clearStage[0] = true;
             }
-        }
-
+        } 
         else if (SceneManager.GetActiveScene().name == "Stage4")
         {
             if (player.GetComponent<PlayerInStage4>().GetCleared() == true)
