@@ -57,7 +57,7 @@ public class IngredientPlacement : MonoBehaviour
 
 		    GameObject tempIngr = Instantiate(basicIngr, instantiatePosition.transform);
 		    tempIngr.transform.position = new Vector3(DEFAULT_OBJECT_POS_X + (xpos * DEFAULT_OBJECT_INTERVAL),
-			    DEFAULT_OBJECT_POS_Y,
+			    0.0f,//DEFAULT_OBJECT_POS_Y,
 			    DEFAULT_OBJECT_POS_Z + (zpos * DEFAULT_OBJECT_INTERVAL));
 	    }
 	    
