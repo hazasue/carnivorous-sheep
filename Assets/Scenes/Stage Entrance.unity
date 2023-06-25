@@ -2103,7 +2103,7 @@ Transform:
   - {fileID: 1708200726}
   - {fileID: 257255117}
   m_Father: {fileID: 874296537}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &387626344
 BoxCollider:
@@ -4028,9 +4028,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 387626343}
   - {fileID: 821505821}
   - {fileID: 2124266756}
-  - {fileID: 387626343}
   - {fileID: 683319282}
   - {fileID: 445387182}
   m_Father: {fileID: 0}
